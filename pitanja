@@ -1,0 +1,140 @@
+[{
+		"diff_level": 3,
+		"question": "Šta će biti ispisano na standardni izlaz kao rezultat izvršavanja sledećeg koda,\nukoliko je dobijena izvršna datoteka pokrenuta komandom ./program a b:\n #include <stdio.h> \nint main(int num_args, char *args[]) \n{\n puts(args[0]); \n return 0; \n}",
+		"answer": ["./program"]
+	},
+	{
+		"diff_level": 3,
+		"question": "Šta će biti ispisano na standardni izlaz kao rezultat izvršavanja sledećeg koda,\nukoliko je dobijena izvršna datoteka pokrenuta komandom ./program a:\n #include <stdio.h> int main(int num_args, char *args[]) { puts(args[1]); return 0; }",
+		"answer": ["a"]
+	},
+	{
+		"diff_level": 3,
+		"question": "Šta će biti ispisano na standardni izlaz kao rezultat izvršavanja sledećeg koda, \nukoliko je dobijena izvršna datoteka pokrenuta komandom ./program a:\n#include <stdio.h>\nint main(int num_args, char *args[]) {\n printf(\"%d, %s\", num_args, args[1]);\n return 0;\n }",
+		"answer": ["2, a "]
+	},
+	{
+		"diff_level": 3,
+		"question": "#include <stdio.h>\nint main(int num_args, char *args[]) {\n printf(\"%d, %s\", num_args, args[0]);\nreturn 0;\n}\n ", 
+"answer": ["2, . / program "]},  
+  {
+	"diff_level": 3,
+	"question": "Šta će biti ispisano na standardni izlaz kao rezultat izvršavanja sledećeg koda, \nukoliko je dobijena izvršna datoteka\npokrenuta komandom ./program a b c d:\n#include <stdio.h>\nint main(int num_args, char *args[]) {\n char **p = args;\n puts(*args);\n return 0;\n}\n",
+	"answer": ["./program"]
+}, 
+{
+	"diff_level": 3,
+	"question": "Šta će biti ispisano na standardni izlaz kao rezultat izvršavanja sledećeg koda, \nukoliko je dobijena izvršna datoteka pokrenuta komandom ./program a b c d:\n#include <stdio.h>\nint main(int num_args, char *args[]) {\n char **p = args;\n puts(*(args+num_args-1));\n return 0;\n}\n",
+	"answer": ["d"]
+}, 
+{
+	"diff_level": 3,
+	"question": "Šta će biti ispisano na standardni izlaz kao rezultat izvršavanja sledećeg koda, \nukoliko je dobijena izvršna datoteka\npokrenuta komandom ./program a b:\n#include <stdio.h>\nint main(int num_args, char **args) {\n char **p = args;\n while(num_args) {\n printf(\"%s\", *args);\n num_args--;\n}\nreturn 0\n;}",
+	"answer": [". / program. / program. / program "]
+  
+}, 
+	{
+"diff_level": 3,
+"question": "Šta će biti ispisano na standardni izlaz kao rezultat izvršavanja sledećeg koda, \nukoliko je dobijena izvršna datoteka\npokrenuta komandom ./program a b:\n#include <stdio.h>\nint main(int num_args, char **args) {\n char **p = args;\n while(num_args) {\n num_args--;\n printf(\"%s\",*(args + num_args));\n}\nreturn 0;\n}",
+"answer": ["b a. / program "]}, 
+{
+"diff_level": 3,
+"question": "Koliko puta će se ispisati reč \"PJISP\" na standardni izlaz, kao rezultat izvršavanja sledećeg koda:\n#include <stdio.h>\nint main() {\n char x = 72; // 72 == 0100 1000\n while(x = 0) {\n puts(\"PJISP\")\n x>>=1;\n }\n puts(\"PJISP\")\nreturn 0;\n}\n",
+	"answer": ["1 put"]}, 
+{
+	"diff_level": 3,
+	"question": "Koliko puta će se ispisati reč \"PJISP\" na standardni izlaz, kao rezultat izvršavanja sledećeg koda:\n#include <stdio.h>\nint main() {\n char x = 72; // 72 == 0100 1000\n while(x != 0) {\n puts(\"PJISP\")\n x>>=1;\n }\n return 0;\n}\n",
+	"answer": ["7 puta"]
+}, {
+	"diff_level": 3,
+	"question": "Koliko puta će se ispisati reč \"PJISP\" na standardni izlaz, kao rezultat izvršavanja sledećeg koda:\n#include <stdio.h>\nint main() {\n char x = 72; // 72 == 0100 1000\n while(x != 0) {\n puts(\"PJISP\")\n x>>=2;\n }\n return 0;\n}\n",
+	"answer": ["4 puta"]
+}, {
+	"diff_level": 3,
+	"question": "Koliko puta će se ispisati reč \"PJISP\" na standardni izlaz, kao rezultat izvršavanja sledećeg koda:\n#include <stdio.h>\nint main() {\n char x = 72; // 72 == 0100 1000\n while(x != 0) {\n puts(\"PJISP\")\n x<<=1;\n }\n return 0;\n}\n",
+	"answer": ["5 puta"]
+}, {
+	"diff_level": 3,
+	"question": "koliko puta puta će se ispisati reč: \n#include <stdio.h>\nint main() {\n char x = 72; // 72 == 0100 1000\n while(x != 0) {\n puts(\"PJISP\")\n x<<=2;\n }\n return 0;\n}\n",
+	"answer": ["3 puta"]
+}, {
+	"diff_level": 3,
+	"question": "Koliko puta će se ispisati reč \"PJISP\" na standardni izlaz, kao rezultat izvršavanja sledećeg koda:\n#include <stdio.h>\nint main() {\n char x = 0x8;\n while(x != 0) {\n puts(\"PJISP\")\n x<<=1;\n }\n return 0;\n}\n",
+	"answer": ["5 puta"]
+}, {
+	"diff_level": 3,
+	"question": "kolko puta puta će se ispisati reč: int main() {\n char x = 72; // 72 == 0100 1000\n while(x = 0) {\n puts(\"PJISP\")\n x>>1;\n }\n puts(\"PJISP\")\n return 0;\n}\n",
+	"answer": ["1 put"]
+}, {
+	"diff_level": 3,
+	"question": "Šta će biti ispisano na standardni izlaz kao rezultat izvršavanja sledećeg koda:\n#include <stdio.h>\nint main() {\n unsigned x = 72; // 72 == 0100 1000\n char i;\n i^=i;\n while(x != 0) {\n i++;\n x<<=1;\n }\n printf(\"%i\", i);\nreturn 0;\n}\n ", 
+	"answer ": ["29 "]}, 
+	{
+"diff_level": 3,
+"question": "Šta će biti ispisano na standardni izlaz kao rezultat izvršavanja sledećeg koda:\n#include <stdio.h>\nint main() {\n int a = 1;\n int b = 2;\n if ((a ^ a))\n printf(\"Veci je b\")\n else\n printf(\"Veci je a\")\n return 0;\n}\n",
+"answer": ["Veci je a"]
+}, {
+	"diff_level": 3,
+	"question": "Šta će biti ispisano na standardni izlaz kao rezultat izvršavanja sledećeg koda:\n#include <stdio.h>\nint main() {\n int a = 1;\n int b = 2;\n if (!(a ^ a))\n printf(\"Veci je b\")\n else\n printf(\"Veci je a\")\n return 0;\n}\n",
+	"answer": ["Veci je b"]
+}, {
+	"diff_level": 3,
+	"question": "Šta će biti ispisano na standardni izlaz kao rezultat izvršavanja sledećeg koda:\n#include <stdio.h>\nint main() {\n int a = 1;\n int b = 2;\n if (!!(a ^ a))\n printf(\"Veci je b\")\n else\n printf(\"Veci je a\")\n return 0;\n}\n",
+	"answer": ["Veci je a"]
+}, {
+	"diff_level": 3,
+	"question": "Šta će biti ispisano na standardni izlaz kao rezultat izvršavanja sledećeg koda:\n#include <stdio.h>\nint main() {\n int a = 1;\n int b = 2;\n if (!!!(a ^ a))\n printf(\"Veci je b\")\n else\n printf(\"Veci je a\")\n return 0;\n}\n",
+	"answer": ["Veci je b"]
+}, {
+	"diff_level": 3,
+	"question": "Kojim bitwise operatorom se postavlja vrednost željenog bita na 1?\n",
+	"answer": ["|"]
+}, {
+	"diff_level": 3,
+	"question": "Kog tipa treba biti promenljiva abc u sledećem delu koda:\nxyz = fopen(abc, \"w\")\nif(xyz == NULL) {\n exit(EXIT_FAILURE);\n}\n",
+	"answer": ["string"]
+}, {
+	"diff_level": 3,
+	"question": "Kog tipa treba biti promenljiva xyz u sledećem delu koda:\nxyz = fopen(abc, \"w\")\nif(xyz == NULL) {\n exit(EXIT_FAILURE);\n}\n",
+	"answer": ["FILE *"]
+}, {
+	"diff_level": 3,
+	"question": "Šta će biti sadržaj tekstualne datoteke \"pjisp.txt\" nakon izvršavanja sledećeg koda, \nukoliko je u datoteci prethodno bio\nzapisan tekst \"123 \":\n#include <stdio.h>\nint main() {\n FILE *out = fopen(\"pjisp.txt\", \"a\")\n fprintf(out, \"456\")\n fclose(out);\n return;\n}\n",
+	"answer": ["123456"]
+}, {
+	"diff_level": 3,
+	"question": "Šta će biti sadržaj tekstualne datoteke \"pjisp.txt\" nakon izvršavanja sledećeg koda, \nukoliko je u datoteci prethodno bio\nzapisan tekst \"123\":\n#include <stdio.h>\nint main() {\n FILE *out = fopen(\"pjisp.txt\", \"w\")\n fprintf(out, \"456\")\n fclose(out);\n return 0;\n}\n",
+	"answer": ["456"]
+}, 
+{
+	"diff_level": 3,
+	"question": "Šta će biti sadržaj tekstualne datoteke \"pjisp.txt\" nakon izvršavanja sledećeg koda, \nukoliko je u datoteci prethodno bio\nzapisan tekst \"123 \":\n#include <stdio.h>\nint main() {\n FILE *out = fopen(\"pjisp.txt\", \"r\")\n fprintf(out, \"456\")\n fclose(out);\n return 0;}\n",
+	"answer": ["123"]
+}, 
+{
+	"diff_level": 3,
+	"question": "Šta će biti ispisano na standardni izlaz kao rezultat izvršavanja sledećeg koda, ukoliko je u datoteci "pjisp.txt" prethodno bio zapisan tekst "123456": #include <stdio.h> #define BUFF_SIZE 4096 int main() { char buff[BUFF_SIZE]; FILE *in = fopen("pjisp.txt", "r"); fscanf(in, "%c", buff); printf("%c", *buff); fclose(in); return 0; }",
+	"answer": ["1"]
+}, 
+{
+	"diff_level": 3,
+	"question": "Šta će biti ispisano na standardni izlaz kao rezultat izvršavanja sledećeg koda, ukoliko je u datoteci "pjisp.txt" prethodno bio zapisan tekst "123 456": #include <stdio.h> #define BUFF_SIZE 4096 int main() { char buff[BUFF_SIZE]; FILE *in = fopen("pjisp.txt", "r"); fscanf(in, "%s", buff); printf("%s", buff); fclose(in); return 0; }",
+	"answer": ["123"]
+}, 
+{
+	"diff_level": 3,
+	"question": "Kako se pravilno zauzima memorija za promenljivu genesis_block: typedef struct block_st { int index; int hash; char num_tx; int timestamp; int nonce; struct block_st *parent_block; } BLOCK; BLOCK *genesis_block;",
+	"answer": ["genesis_block = malloc(sizeof(BLOCK));"]
+}, 
+{
+	"diff_level": 3,
+	"question": "Kako se pravilno oslobađa memorija zauzeta za promenljivu genesis_block: typedef struct block_st { int index; int hash; char num_tx; int timestamp; int nonce; struct block_st *parent_block; } BLOCK; BLOCK *genesis_block;",
+	"answer": ["free(genesis_block);"]
+}, 
+{
+	"diff_level": 3,
+	"question": "Šta će biti ispisano na standardni izlaz kao rezultat izvršavanja sledećeg koda, \nukoliko je u datoteci \"pjisp.txt\"\nprethodno bio zapisan tekst \"123 456\":\n#include <stdio.h>\n#define BUFF_SIZE 4096\nint main(void) {\n char buff[BUFF_SIZE];\n FILE *in = fopen(\"pjisp.txt\", \"r\")\nfscanf(in, \"%s\", buff);\n printf(\"%s\", buff);\n fclose(in);\nreturn 0;\n}\n ", 
+	"answer": ["123"]
+}
+
+]
